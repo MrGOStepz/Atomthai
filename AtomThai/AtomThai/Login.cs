@@ -28,6 +28,12 @@ namespace AtomThai
                 MessageBox.Show("ID is incorrect", "Caption");
             }
         }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            StuffRegister fmStuffRegister = new StuffRegister();
+            fmStuffRegister.Show();
+        }
     }
 
 
