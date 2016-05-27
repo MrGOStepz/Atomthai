@@ -34,6 +34,12 @@ namespace AtomThai
             StuffRegister fmStuffRegister = new StuffRegister();
             fmStuffRegister.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Calculator fmCal = new Calculator();
+            fmCal.Show();
+        }
     }
 
 
