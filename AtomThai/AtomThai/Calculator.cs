@@ -35,8 +35,10 @@ namespace AtomThai
 
         public void TextFormat(string strA)
         {
+
             if (txtTotal.Text == "0" && strA == "0")
                 return;
+         
             _strB.Append(strA);
             txtTotal.Text = _strB.ToString();
         }
@@ -80,6 +82,9 @@ namespace AtomThai
                 case "btn0":
                     TextFormat("0");
                     break;
+                case "btnPoint":
+                    TextFormat(".");
+                    break;
             }
 
         }
@@ -88,6 +93,46 @@ namespace AtomThai
         {
             txtTotal.Text = "0";
             _strB = new StringBuilder();
+        }
+
+        private void btnPoint_Click(object sender, EventArgs e)
+        {
+            string strTemp;
+            strTemp = _strB.ToString();
+            if (strTemp.Contains("."))
+                return;
+
+            if (txtTotal.Text == "0")
+            {
+                _strB.Append("0.");
+                txtTotal.Text = _strB.ToString();
+            }
+            else
+            {
+                TextFormat(".");
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            int iTemp;
+            string strTemp;
+
+            if (txtTotal.Text == "0.")
+                return;
+
+            strTemp = _strB.ToString();            
+            iTemp = strTemp.Length;
+
+            if (iTemp == 1)
+            {
+                txtTotal.Text = "0.";
+                return;
+            }
+
+            strTemp = strTemp.Remove(iTemp - 1);
+            _strB = new StringBuilder();
+            _strB.Append(strTemp);
         }
     }
 }
