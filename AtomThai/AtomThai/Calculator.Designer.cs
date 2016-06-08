@@ -115,7 +115,7 @@
             this.btnPoint.TabIndex = 17;
             this.btnPoint.Text = ".";
             this.btnPoint.UseVisualStyleBackColor = true;
-            this.btnPoint.Click += new System.EventHandler(this.btn_Click);
+            this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click);
             // 
             // btn0
             // 
@@ -135,7 +135,7 @@
             this.btnDel.TabIndex = 15;
             this.btnDel.Text = "<";
             this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btn_Click);
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnMultiple
             // 
@@ -272,6 +272,7 @@
             this.ClientSize = new System.Drawing.Size(607, 505);
             this.Controls.Add(this.groupBox1);
             this.Name = "Calculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
