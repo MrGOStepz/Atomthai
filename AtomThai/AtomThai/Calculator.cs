@@ -116,9 +116,27 @@ namespace AtomThai
         private void btnDel_Click(object sender, EventArgs e)
         {
             int iTemp;
+<<<<<<< HEAD
             string strTemp = _strB.ToString();
             iTemp = strTemp.Length;
             strTemp.Remove(iTemp - 2);
+=======
+            string strTemp;
+
+            if (txtTotal.Text == "0.")
+                return;
+
+            strTemp = _strB.ToString();            
+            iTemp = strTemp.Length;
+
+            if (iTemp == 1)
+            {
+                txtTotal.Text = "0.";
+                return;
+            }
+
+            strTemp = strTemp.Remove(iTemp - 1);
+>>>>>>> origin/StuffRegister
             _strB = new StringBuilder();
             _strB.Append(strTemp);
         }
